@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ABOUT.html">
+    <title>ANANAS</title>
+<style>
+    :root{
+            --maincolor:white;
+        }
+        {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+     html{
+            font-family:Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            background:white;
+        }
+    body{
+        /*font-family:Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;*/
+        width:1400px;
+        margin: 0px auto;
+    }
+    #menu-top{
+        background:#303030;
+        height: 32px;
+        width:100%;
+    }
+    #menu-top .navmenu{
+            height:100%;
+            margin-left:300px;
+            float:left;
+        }
+        #menu-top .navmenu>ul{
+            list-style-type: none;
+            height: 100%;
+        }
+        #menu-top .navmenu>ul>li{
+            display:inline-block;
+            height: 100%;
+            line-height: 32px;
+            margin-left:30px;
+        }
+        #menu-top .navmenu>ul>li>a{
+            text-decoration: none;
+            color:white;
+            font-size: 16px;
+            font-weight:0;
+            letter-spacing: 0.5px;
+        }
+        #menu-top .navmenu span{
+            color:white;
+            font-size: 1.5rem;
+            line-height: 32px;
+            margin-right: 8px;
+        }
+        #menu-top .search{
+            float:left;
+            width:250px;
+            height:25px;
+            margin-top:4px;
+            background:white;
+            border-radius: 12.5px;
+            margin-left:30px;
+        }
+        #menu-top .search input{
+            background:none;
+            margin-left:8px;
+            margin-top:5px;
+            color:black;
+            font-weight: bold;
+            border:none;
+            width: 79%;
+        }
+        #menu-top .search input:focus{
+            outline:none;
+        }
+        #menu-top .search span{
+            color:black;
+            font-size:1.8rem;
+        }
+        .running-text{
+            width:100%;
+            height: 50px;
+            background: #f1f1f1;
+            float:left;
+            overflow: hidden;
+        }
+        .running-text >ul{
+            width:100%;
+            height: 100%;
+            animation: runningtext linear 100s infinite;
+            position: relative;
+            white-space: nowrap;
+            line-height: 50px;
+        }
+        .running-text >ul:hover{
+            animation-play-state: paused;
+        }
+        .running-text >ul >li{
+            display:inline-block;
+            margin-left:30px;
+            letter-spacing: 0.5px;
+            font-size: 18px;
+            text-transform: uppercase;
+            /*font-weight: bold;*/
+            font-style: italic;
+        }
+        .running-text >ul >li::before{
+            content:">> ";
+            color:brown;
+        }
+        .running-text >ul >li>a{
+            color:brown;
+        }
+        @keyframes runningtext{
+            0%{left:100%}
+            100%{left:-10000px}
+        }
+    #banner{
+        background: red;
+        height: auto;
+        width:100%;
+    }
+    #banner img{
+        width:1400px;
+    }
+    #main-menu{
+        height: 92px;
+        width:100%;
+        /*background:pink;*/
+    }
+    #main-menu{
+            height: 92px;
+            color: var(--maincolor);
+            
+        }
+        #main-menu>ul{
+            list-style-type: none;
+            height: 100%;
+        }
+        #main-menu>ul>li{
+            float:left;
+            height: 100%;
+            line-height: 92px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color:black;
+            padding: 0 40px;
+            font-size:22px;
+            position: relative;
+           /* text-align: left;*/
+            margin-left: 15px;
+        }
+        #main-menu>ul>li:hover{
+            color:orangered;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #main-menu>ul>li:hover>a{
+            color:orangered;
+        }
+        #main-menu>ul>li>a{
+            color:black;
+            text-decoration: none;
+        }
+        #main-menu>ul>li>ul{
+            list-style-type: none;
+            /* border:1px solid red; */
+            width:300px;
+            background:white;
+            position: absolute;
+            left:0;
+            padding:8px 0;
+            display:none;
+            z-index: 1;
+            /* top:0; */
+        }
+        #main-menu>ul>li:hover>ul{
+            display:block;
+        }
+        #main-menu>ul>li>ul>li{
+            text-transform: none;
+            font-weight: normal;
+            height: 32px;
+            /*white-space: nowrap;
+            overflow: hidden;
+            /*text-overflow: ellipsis;*/
+            line-height: 32px;
+             /* border:1px solid yellow; */
+             padding:0 10px;
+             color:black;
+             position: relative;
+        }
+        @keyframes slide {
+            0%{left:10px;}
+            20%{left:-8px;}
+            40%{left:6px;}
+            60%{left:-4px;}
+            80%{left:2px;}
+            100%{left:0;}
+        }
+        #main-munu>ul>li>ul>li::before{
+        }
+        #main-menu>ul>li>ul>li:hover{
+            color:orangered;
+            background:#4C4C4C;
+            animation: slide 0.5s;
+        }
+        #main-menu>ul>li>ul>li:hover>a{
+            color:orangered;
+        }
+        #main-menu>ul>li>ul>li>a{
+            color:black;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    #main #left{
+        width:700px;
+        height:650px;
+        /*background: blue;*/
+        float: left;
+    }
+    #main #left img{
+        margin-top: 5px;
+        
+    }
+    #main #left ul>li{
+        font-size: 18px;
+        list-style-type: none;
+        padding: 10px;
+    }
+    #main #left ul>li>h2{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #main-content #left:hover ul>li>h2{
+             color:orangered;
+         }
+    #main #right{
+        width: 700px;
+        height:650px;
+        /*background:yellow;*/
+        float: left;
+    }
+    #main #right img{
+        margin-top: 5px;
+        width:600px;
+        height:320px;
+    }
+    #main #right ul>li{
+        font-size: 18px;
+        list-style-type: none;
+        padding: 10px;
+    }
+    #main #right ul>li>h2{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #main-content #right:hover ul>li>h2{
+             color:orangered;
+         }
+    #advertising{
+        width:100%;
+        height:500px;
+        float:left;
+        /*background:orange;*/
+    }
+    #advertising h3{
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            font-size: 30px;
+            margin-left: 550px;
+            
+    }
+    #advertising:hover h3{
+             color:orangered;
+    }
+   #advertising img{
+       width:440px;
+       height:400px;
+       float:left;
+       margin-left: 20px;   
+   }
+   #advertising a {
+         display: block;
+         width: 440px;
+        /*height: 50%;*/
+         text-align: center;
+        float: left;
+        margin-right: 25px;
+   }
+   #advertising a div {
+            color:#4C4C4C;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    #advertising a:hover img{
+            animation: blur 2.5s;
+    }
+    @keyframes blur {
+            0%{opacity: 50%;}
+            100%{opacity: 100%;}
+        }
+    #advertising a:hover div{
+            animation: blur 2.5s;
+    }
+    @keyframes blur {
+            0%{opacity: 50%;}
+            100%{opacity: 100%;}
+        }
+    #footline{
+        width: 1400px;
+        height:50px;
+        /*background: red;*/
+        float: left;
+        margin-bottom: 20px;
+    }
+    #footline ul{
+        list-style-type: none;
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 50px;
+        /*border: 2px solid #303030;*/
+        display: inline-block;
+        text-align: center;
+        margin-left: 550px;
+        letter-spacing: 0.1px;
+    }
+    #footline ul li{
+        color: black;
+        margin: 20px,0px;
+        
+    }
+    #footer{
+        width: 100%;
+        height:300px;
+        background:#4C4C4C;
+        float: left;
+    }
+        #footer .footer-tree{
+            float: left;
+            width:25%;
+            height: 50%;
+            margin-top: 10px;
+
+        }
+        #footer .footer-company{
+            list-style-type: none;
+            float: left;
+            width: 25%;
+            height:50%;
+            color:white;
+            text-transform: uppercase;
+            font-weight:bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #footer .footer-company li{
+            display: block;
+            text-transform: none;
+            font-size: 14px;
+            font-weight: none;
+            color:#cccccc;
+        }
+        #footer .footer-support{
+            list-style-type: none;
+            float: left;
+            width: 25%;
+            height:50%;
+            color:white;
+            text-transform: uppercase;
+            font-weight:bold; 
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #footer .footer-support li{
+            display: block;
+            text-transform: none;
+            font-size: 14px;
+            font-weight: none;
+            color:#cccccc;
+        }
+        #footer .footer-contact{
+            list-style-type: none;
+            float: left;
+            width: 25%;
+            height:50%;
+            color:white;
+            text-transform: uppercase;
+            font-weight:bold; 
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #footer .footer-contact li{
+            display: block;
+            text-transform: none;
+            font-size: 14px;
+            font-weight: none;
+            color:#cccccc;
+        }
+        #footer .footer-social{
+            float:left;
+            margin-left: 350px;
+            
+        }
+        #footer .footer-logo{
+            float:left;
+            margin-left: 150px;
+        }
+        #footer .footer-credit{
+           
+            margin-left: 1050px;
+            
+        }
+</style>
+</head>
+    <body>
+        <div id="menu-top">
+            <div class="navmenu">
+                <ul>
+                    <li><a href="https://ananas.vn/search-order"><span class="glyphicon glyphicon-list-alt"></span>Tra cứu đơn hàng</a></li>
+                    <li><a href="https://ananas.vn/stores"><span class="glyphicon glyphicon-map-marker"></span>Tìm cửa hàng</a></li>
+                    <li><a href="https://ananas.vn/your-wishlist"><span class="glyphicon glyphicon-heart"></span>Yêu thích</a></li>
+                    <li><a href="https://ananas.vn/coming-soon"><span class="glyphicon glyphicon-user"></span>Đăng nhập</a></li>
+                    <li><a href="https://ananas.vn/your-cart/"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ hàng</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm ...">
+                <a href=""><span class="glyphicon glyphicon-search"></span></a>
+            </div>
+        </div>
+        <div class="arrow"></div>
+        <div class="running-text">
+            <ul>
+                <li><a href="">Hàng 2 tuần nhận đổi - Giày nửa năm bảo hành</a></li>
+                <li><a href="">Buy more pay less - Áp dụng khi mua phụ kiện</a></li>
+                <li><a href="">Buy 2 get 10% off - Áp dụng với tất cả Basic Tee</a></li>
+                <li><a href="">Free Shipping với hóa đơn từ 800K!</a></li>
+                <li><a href="">Discover YOU – truyền cảm hứng cùng đồng hành với Ananas</a></li>
+                <li><a href="">Trăm nẻo đường - một đích đến</a></li>
+                <li><a href="">Mọi người thường gọi chúng tôi là Dứa!</a></li>
+            </ul>
+        </div>
+        <div id="banner">
+            <img src="/56742470_1036986733138529_5012875138270494720_n.jpg" alt="">
+        </div>
+        <div id="main-menu">
+            <ul>
+                <li><a href="https://ananas.vn/"><img src="/Logo_Ananas_Header.svg"alt""></a></li>
+                <li><a href="">Home</a></li>
+                <li>About
+                    <ul>
+                        <li><a href="">Style</a></li>
+                        <li><a href="">Dòng sản phẩm</a></li>
+                        <li><a href="">Tất cả giày</a></li>
+                    </ul>
+                </li>
+                <li>Products
+                    <ul>
+                        <li><a href="">Cho nam</a></li>
+                        <li><a href="">Cho nữ</a></li>
+                        <li><a href="">Outlet sale</a></li>
+                        <li><a href="">Thời trang & Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li>Sale off
+                    <ul>
+                        <li><a href="">High Top</a></li>
+                        <li><a href="">Low Top</a></li>
+                        <li><a href="">Slip-on</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="https://ananas.vn/discoveryou"><img src="/DiscoverYOU.svg"alt""></a></li>
+             </ul>
+        </div>
+        <div id="main">
+            <div id="left">
+                <ul>
+                    <li>
+                        <img src="/leftcontent.jpg" alt="">
+                        <h2>All black in black</h2>
+                        Ananas muốn giúp các bạn trẻ hãy tự tin với bản thân mình, cần hiểu rõ mình thì những quyết định trong cuộc sống sẽ chính xác hơn. Vì khi sống đúng với đúng cá tính của mình thì cuộc sống mới thật sự hạnh phúc.
+                        Mỗi cá thể đều khác biệt. Nó đã tạo ra 1 giá trị vững chắc cho thương hiệu của Ananas. Chính những loại giày lại đem cho người dùng một cảm giác khác nhau, mỗi một đôi giày là cả một câu chuyện, 1 cá tính, 1 sở thích mà giới trẻ Việt bắt đầu khẳng định chính những điều mà mình thật sự mong muốn.
+                    </li>
+                </ul>
+            </div>
+            <div id="right">
+                <ul>
+                    <li>
+                        <img src="/rightcontent.jpg" alt="">
+                        <h2> Outlet Sale</h2>
+                        Danh mục những sản phẩm bán tại "giá tốt hơn" chỉ được bán kênh online - Online Only, chúng ta đã từng làm mưa làm gió một thời gian và hiện đang rơi vào tình trạng bể size, bể số.
+                        Ananas-mang thương hiệu Việt đi khắp muôn nơi.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="advertising">
+            <h3>Danh mục mua hàng</h3>
+            <a href="">
+                <img src="/stu_basas_A61015_11-500x500.jpg" alt="">
+                <div>New Arrivals</div>
+            </a>
+            <a href="">
+                <img src="/pro_AV00115_2-500x500.jpg" alt="">
+                <div>Best Seller</div>
+            </a>
+            <a href="">
+                <img src="/stu_basas_A61024_1-500x500.jpg" alt="">
+                <div>Sale-off</div>
+            </a>
+            
+        </div>
+        <div id="footline">
+            <ul>
+                <li><a href=""><span class="glyphicon glyphicon-circle-arrow-right"></span>Muốn xem nữa<span class="glyphicon glyphicon-circle-arrow-left"></span></a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <div class="footer-tree">
+                <img src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Store.svg" alt="">
+            </div>
+            <div class="footer-company">
+                <p>Về công ty</p>
+                <p class="p1"><li>Dứa tuyển dụng</li></p>
+                <p class="p2"><li>Liên hệ nhượng quyền</li></p>
+                <p class="p3"><li>Về Ananas</li></p>
+            </div>
+            <div class="footer-support">
+                <p>Hỗ trợ</p>
+                <p class="p1"><li>FAQs</li></p>
+                <p class="p2"><li>Bảo mật thông tin</li></p>
+                <p class="p3"><li>Chính sách chung</li></p>
+            </div>
+            <div class="footer-contact">
+                <p>Liên hệ</p>
+                <p class="p1"><li>Email góp ý</li></p>
+                <p class="p2"><li>Hotline</li></p>
+                <p class="p3"><li>0963429749</li></p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/Ananas.vietnam/"><img src="icon_facebook.svg"alt=""></a> 
+                <a href="https://www.instagram.com/ananasvn/"><img src="icon_instagram.svg"alt=""></a> 
+                <a href="https://www.youtube.com/discoveryou"><img src="icon_youtube.svg"alt=""></a> 
+            </div>
+            <div class="footer-logo">
+                <a href="https://ananas.vn/"><img src="Logo_Ananas_Footer.svg"alt""></a>
+            </div> 
+            <div class="footer-credit">
+                <a href="http://online.gov.vn/Home/WebDetails/61921"><img src="icon_bocongthuong.png" alt=""></a>
+                <br/>
+                Copyright © 2021 Ananas. All rights reserved.
+                <br/>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

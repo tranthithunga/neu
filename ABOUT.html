@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>ABOUT</title>
+    <style>
+       :root{
+            --maincolor:white;
+        }
+        {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+     html{
+            font-family:Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            background:#F1F1F1;
+        }
+    body{
+        /*font-family:Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;*/
+        width:1400px;
+        margin: 0px auto;
+    }
+    #menu-top{
+        background:#303030;
+        height: 32px;
+        width:100%;
+    }
+    #menu-top .navmenu{
+            height:100%;
+            margin-left:300px;
+            float:left;
+        }
+        #menu-top .navmenu>ul{
+            list-style-type: none;
+            height: 100%;
+        }
+        #menu-top .navmenu>ul>li{
+            display:inline-block;
+            height: 100%;
+            line-height: 32px;
+            margin-left:30px;
+        }
+        #menu-top .navmenu>ul>li>a{
+            text-decoration: none;
+            color:white;
+            font-size: 16px;
+            font-weight:0;
+            letter-spacing: 0.5px;
+        }
+        #menu-top .navmenu span{
+            color:white;
+            font-size: 1.5rem;
+            line-height: 32px;
+            margin-right: 8px;
+        }
+        #menu-top .search{
+            float:left;
+            width:250px;
+            height:25px;
+            margin-top:4px;
+            background:white;
+            border-radius: 12.5px;
+            margin-left:30px;
+        }
+        #menu-top .search input{
+            background:none;
+            margin-left:8px;
+            margin-top:5px;
+            color:black;
+            font-weight: bold;
+            border:none;
+            width: 79%;
+        }
+        #menu-top .search input:focus{
+            outline:none;
+        }
+        #menu-top .search span{
+            color:black;
+            font-size:1.8rem;
+        }
+        .running-text{
+            width:100%;
+            height: 50px;
+            background: #f1f1f1;
+            float:left;
+            overflow: hidden;
+        }
+        .running-text >ul{
+            width:100%;
+            height: 100%;
+            animation: runningtext linear 100s infinite;
+            position: relative;
+            white-space: nowrap;
+            line-height: 50px;
+        }
+        .running-text >ul:hover{
+            animation-play-state: paused;
+        }
+        .running-text >ul >li{
+            display:inline-block;
+            margin-left:30px;
+            letter-spacing: 0.5px;
+            font-size: 18px;
+            text-transform: uppercase;
+            /*font-weight: bold;*/
+            font-style: italic;
+        }
+        .running-text >ul >li::before{
+            content:">> ";
+            color:brown;
+        }
+        .running-text >ul >li>a{
+            color:brown;
+        }
+        @keyframes runningtext{
+            0%{left:100%}
+            100%{left:-10000px}
+        } 
+        #main-menu{
+        height: 92px;
+        width:100%;
+        /*background:pink;*/
+    }
+    #main-menu{
+            height: 92px;
+            color: var(--maincolor);
+            
+        }
+        #main-menu>ul{
+            list-style-type: none;
+            height: 100%;
+        }
+        #main-menu>ul>li{
+            float:left;
+            height: 100%;
+            line-height: 92px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color:black;
+            padding: 0 40px;
+            font-size:22px;
+            position: relative;
+           /* text-align: left;*/
+            margin-left: 15px;
+        }
+        #main-menu>ul>li:hover{
+            color:orangered;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #main-menu>ul>li:hover>a{
+            color:orangered;
+        }
+        #main-menu>ul>li>a{
+            color:black;
+            text-decoration: none;
+        }
+        #main-menu>ul>li>ul{
+            list-style-type: none;
+            /* border:1px solid red; */
+            width:300px;
+            background:white;
+            position: absolute;
+            left:0;
+            padding:8px 0;
+            display:none;
+            z-index: 1;
+            /* top:0; */
+        }
+        #main-menu>ul>li:hover>ul{
+            display:block;
+        }
+        #main-menu>ul>li>ul>li{
+            text-transform: none;
+            font-weight: normal;
+            height: 32px;
+            /*white-space: nowrap;
+            overflow: hidden;
+            /*text-overflow: ellipsis;*/
+            line-height: 32px;
+             /* border:1px solid yellow; */
+             padding:0 10px;
+             color:black;
+             position: relative;
+        }
+        @keyframes slide {
+            0%{left:10px;}
+            20%{left:-8px;}
+            40%{left:6px;}
+            60%{left:-4px;}
+            80%{left:2px;}
+            100%{left:0;}
+        }
+        #main-munu>ul>li>ul>li::before{
+        }
+        #main-menu>ul>li>ul>li:hover{
+            color:orangered;
+            background:#4C4C4C;
+            animation: slide 0.5s;
+        }
+        #main-menu>ul>li>ul>li:hover>a{
+            color:orangered;
+        }
+        #main-menu>ul>li>ul>li>a{
+            color:black;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    #main{
+        width:1400px;
+        height: 1400px;
+    }
+    #main #left{
+        width: 300px;
+        height:auto;
+        /*background: red;*/
+        float:left;
+    }
+    #main #left .menu-left>ul {
+        margin: 0px;
+        padding: 15px;
+    }
+    #main #left .menu-left>ul>li{
+        list-style-type: none;
+    }
+    #main #left .menu-left>h3{
+        /*background: red;*/
+        height:40px;
+        margin-top:50px;
+        text-align:center;
+        font-size:20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color:#999999;
+        line-height:40px;
+    }
+    #main #left .menu-left>ul>li>a{
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+        border-bottom: 1px solid #ccc;
+        height:60px;
+        line-height:60px;
+    }
+    #main #right{
+        width: 1100px;
+        height:auto;
+        /*background:blue;*/
+        float:left;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #main #right .product-item{
+        margin-top: 20px;
+        justify-content: space-between;
+        
+    }
+    #main #right .product-item .product-top img{
+        width:300px;
+        height: 300px;
+        text-align: center;
+        padding: 12px 0;
+        /*margin-right: 0px;*/
+        margin-left: 30px;
+        float: left;
+        display: block;
+    }
+    #main #right .product-item .product-top img:hover{
+            animation: blur 2.5s;
+    }
+    @keyframes blur {
+            0%{opacity: 50%;}
+            100%{opacity: 100%;}
+        }
+     #main #right .product-item .product-top li{
+         float: left;
+         list-style-type: none;
+     }
+    #main #right .product-item .product-top h1{
+        font-size: 18px;
+        font-family: Helvetica,Arial,sans-serif;
+        font-weight: bold;
+        color:black;  
+        width: 300px;
+        text-align: center;
+        margin-left: 30px;
+        margin-top: 6px; 
+        display: block;
+        position: relative;
+    }
+    #main #right .product-item .product-top h1:hover{
+        color: orangered;
+    }
+    #main #right .product-item .product-top h2{
+        font-size: 18px;
+        font-family: Helvetica,Arial,sans-serif;
+        color:#555;
+        margin-left: 30px;
+        width: 300px;
+        text-align: center;
+        
+    }
+    #main #right .product-item .product-top p{
+        font-size: 18px;
+        font-family: Helvetica,Arial,sans-serif;
+        font-weight: bold;
+        color: black;  
+        margin-left: 30px; 
+        width: 300px;
+        text-align: center;
+    }
+    #footer{
+        width: 100%;
+        height:300px;
+        background:#4C4C4C;
+        float: left;
+    }
+        #footer .footer-tree{
+            float: left;
+            width:25%;
+            height: 50%;
+            margin-top: 10px;
+
+        }
+        #footer .footer-company{
+            list-style-type: none;
+            float: left;
+            width: 25%;
+            height:50%;
+            color:white;
+            text-transform: uppercase;
+            font-weight:bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #footer .footer-company li{
+            display: block;
+            text-transform: none;
+            font-size: 14px;
+            font-weight: none;
+            color:#cccccc;
+        }
+        #footer .footer-support{
+            list-style-type: none;
+            float: left;
+            width: 25%;
+            height:50%;
+            color:white;
+            text-transform: uppercase;
+            font-weight:bold; 
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #footer .footer-support li{
+            display: block;
+            text-transform: none;
+            font-size: 14px;
+            font-weight: none;
+            color:#cccccc;
+        }
+        #footer .footer-contact{
+            list-style-type: none;
+            float: left;
+            width: 25%;
+            height:50%;
+            color:white;
+            text-transform: uppercase;
+            font-weight:bold; 
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #footer .footer-contact li{
+            display: block;
+            text-transform: none;
+            font-size: 14px;
+            font-weight: none;
+            color:#cccccc;
+        }
+        #footer .footer-social{
+            float:left;
+            margin-left: 350px;
+            
+        }
+        #footer .footer-logo{
+            float:left;
+            margin-left: 150px;
+        }
+        #footer .footer-credit{
+           
+            margin-left: 1050px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-top">
+        <div class="navmenu">
+            <ul>
+                <li><a href="https://ananas.vn/search-order"><span class="glyphicon glyphicon-list-alt"></span>Tra cứu đơn hàng</a></li>
+                <li><a href="https://ananas.vn/stores"><span class="glyphicon glyphicon-map-marker"></span>Tìm cửa hàng</a></li>
+                <li><a href="https://ananas.vn/your-wishlist"><span class="glyphicon glyphicon-heart"></span>Yêu thích</a></li>
+                <li><a href="https://ananas.vn/coming-soon"><span class="glyphicon glyphicon-user"></span>Đăng nhập</a></li>
+                <li><a href="https://ananas.vn/your-cart/"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ hàng</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm ...">
+            <a href=""><span class="glyphicon glyphicon-search"></span></a>
+        </div>
+    </div>
+        <div class="arrow"></div>
+        <div class="running-text">
+        <ul>
+            <li><a href="">Hàng 2 tuần nhận đổi - Giày nửa năm bảo hành</a></li>
+            <li><a href="">Buy more pay less - Áp dụng khi mua phụ kiện</a></li>
+            <li><a href="">Buy 2 get 10% off - Áp dụng với tất cả Basic Tee</a></li>
+            <li><a href="">Free Shipping với hóa đơn từ 800K!</a></li>
+            <li><a href="">Discover YOU – truyền cảm hứng cùng đồng hành với Ananas</a></li>
+            <li><a href="">Trăm nẻo đường - một đích đến</a></li>
+            <li><a href="">Mọi người thường gọi chúng tôi là Dứa!</a></li>
+        </ul>
+    </div>
+    <div id="main-menu">
+        <ul>
+            <li><a href="https://ananas.vn/"><img src="/Logo_Ananas_Header.svg"alt""></a></li>
+            <li><a href="">Home</a></li>
+            <li>About
+                <ul>
+                    <li><a href="">Style</a></li>
+                    <li><a href="">Dòng sản phẩm</a></li>
+                    <li><a href="">Tất cả giày</a></li>
+                </ul>
+            </li>
+            <li>Products
+                <ul>
+                    <li><a href="">Cho nam</a></li>
+                    <li><a href="">Cho nữ</a></li>
+                    <li><a href="">Outlet sale</a></li>
+                    <li><a href="">Thời trang & Phụ kiện</a></li>
+                </ul>
+            </li>
+            <li>Sale off
+                <ul>
+                    <li><a href="">High Top</a></li>
+                    <li><a href="">Low Top</a></li>
+                    <li><a href="">Slip-on</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="https://ananas.vn/discoveryou"><img src="/DiscoverYOU.svg"alt""></a></li>
+         </ul>
+    </div>
+    <div id="main">
+        <div id="left">
+        <div class="menu-left">
+            <h3>Dòng sản phẩm</h3>
+            <ul>
+                <li><a href="">Basas</a></li>
+                <li><a href="">Vintas</a></li>
+                <li><a href="">Urbas</a></li>
+                <li><a href="">Pattas</a></li>
+                <li><a href="">Creas</a></li>
+                <li><a href="">Graphic Tee</a></li>
+                <li><a href="">Hoodie</a></li>
+                <li><a href="">Sweatshirt</a></li>
+                <li><a href="">Backpack | Ba lô</a></li>
+                <li><a href="">Socks | Vớ</a></li>
+                <li><a href="">Hat | Nón</a></li>
+                <li><a href="">Track 6</a></li>
+                <li><a href="">Basic Tee | Áo thun cơ bản</a></li>
+                <li><a href="">Shoelaces | Dây giày</a></li>
+            </ul>  
+        </div>
+        </div>
+        <div id="right">
+                    <div class="product-item">
+                        <div class="product-top">
+                        <li>
+                            <a href=""><img src="/image01.jpg"alt""></a>
+                            <h1>Vintas Temperate-Low Top</h1>
+                            <h2>Dusty Olive</h2>
+                            <p>720.000 VND</p>
+                        </li>
+                        </div>
+                        <div class="product-top">
+                        <li>
+                            <a href=""><img src="/image02.jpg"alt""></a>
+                            <h1>Basas Hook N'Loop NE-Mule</h1>
+                            <h2>Black</h2>
+                            <p>520.000 VND</p>
+                        </li>
+                        </div>
+                        <div class="product-top">
+                            <li>
+                            <a href=""><img src="/image03.jpg"alt""></a>
+                            <h1>Basas Bumper Gum EXT-High Top</h1>
+                            <h2>Black/Gum</h2>
+                            <p>620.000 VND</p>
+                            </li>
+                        </div>
+                        <div class="product-top">
+                            <li>
+                            <a href=""><img src="/image04.jpg"alt""></a>
+                            <h1>Track 6 Triple Black-Low Top</h1>
+                            <h2>All Black</h2>
+                            <p>990.000 VND</p>
+                            </li>
+                        </div>
+                        <div class="product-top">
+                            <li>
+                            <a href=""><img src="/image05.jpg"alt""></a>
+                            <h1>Vintas Mister-Low Top</h1>
+                            <h2>Jet Pirate</h2>
+                            <p>465.000 VND</p>
+                            </li>
+                        </div>
+                        <div class="product-top">
+                            <li>
+                            <a href=""><img src="/image06.jpg"alt""></a>
+                            <h1>Basas Bumper Gum NE-Mule</h1>
+                            <h2>OffWhite/Gum</h2>
+                            <p>520.000 VND</p>
+                            </li>
+                        </div>
+                        <div class="product-top">
+                            <li>
+                                <a href=""><img src="/image07.jpg"alt""></a>
+                                <h1>Bucket Hat-Ananas Typo Box</h1>
+                                <h2>Black</h2>
+                                <p>285.000 VND</p>
+                            </li>
+                        </div>
+                        <div class="product-top">
+                            <li>
+                                <a href=""><img src="/image08.jpg"alt""></a>
+                                <h1>Track 6 Suede Moonphase-Low Top</h1>
+                                <h2>Winterize</h2>
+                                <p>990.000 VND</p>
+                            </li>
+                        </div>
+                        <div class="product-top">
+                            <li>
+                                <a href=""><img src="/image10.jpg"alt""></a>
+                                <h1>Graphic Tee-Lucky Luke Comics</h1>
+                                <h2>Caviar Black</h2>
+                                <p>365.000 VND</p>
+                            </li>
+                        </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-tree">
+            <img src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Store.svg" alt="">
+        </div>
+        <div class="footer-company">
+            <p>Về công ty</p>
+            <p class="p1"><li>Dứa tuyển dụng</li></p>
+            <p class="p2"><li>Liên hệ nhượng quyền</li></p>
+            <p class="p3"><li>Về Ananas</li></p>
+        </div>
+        <div class="footer-support">
+            <p>Hỗ trợ</p>
+            <p class="p1"><li>FAQs</li></p>
+            <p class="p2"><li>Bảo mật thông tin</li></p>
+            <p class="p3"><li>Chính sách chung</li></p>
+        </div>
+        <div class="footer-contact">
+            <p>Liên hệ</p>
+            <p class="p1"><li>Email góp ý</li></p>
+            <p class="p2"><li>Hotline</li></p>
+            <p class="p3"><li>0963429749</li></p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/Ananas.vietnam/"><img src="icon_facebook.svg"alt=""></a> 
+            <a href="https://www.instagram.com/ananasvn/"><img src="icon_instagram.svg"alt=""></a> 
+            <a href="https://www.youtube.com/discoveryou"><img src="icon_youtube.svg"alt=""></a> 
+        </div>
+        <div class="footer-logo">
+            <a href="https://ananas.vn/"><img src="Logo_Ananas_Footer.svg"alt""></a>
+        </div> 
+        <div class="footer-credit">
+            <a href="http://online.gov.vn/Home/WebDetails/61921"><img src="icon_bocongthuong.png" alt=""></a>
+            <br/>
+            Copyright © 2021 Ananas. All rights reserved.
+            <br/>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
